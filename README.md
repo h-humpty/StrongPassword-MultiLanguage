@@ -3,7 +3,7 @@
 [Live Demo](https://strong-password-gene.netlify.app/)
 :neckbeard:
 
-![](https://i.imgur.com/O677Kuu.gif)
+![demoGen](public/assets/demoGen.gif)
 
 ## Installing
 
