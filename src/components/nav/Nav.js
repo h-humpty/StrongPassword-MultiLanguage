@@ -56,6 +56,7 @@ const Nav = (props) => {
   }, [test]);
   useEffect(() => {
     document.body.dir = currentLanguage.dir || "ltr";
+    document.title = t("app_title");
   }, [currentLanguage, t]);
 
   const drawerToggleClickHandler = () => {
@@ -79,7 +80,7 @@ const Nav = (props) => {
       >
         <div className='container w-container'>
           <a
-            href='/Home'
+            href='#'
             aria-current='page'
             className='brand-link w-nav-brand w--current'
           >
@@ -93,7 +94,7 @@ const Nav = (props) => {
             <div className='brand-name'>StrongPasswordGenerator</div>
           </a>
           <nav role='navigation' className='nav-menu w-nav-menu'>
-            <a href='/Home' className='nav-link w-nav-link'>
+            <a href='#' className='nav-link w-nav-link'>
               HOME
             </a>
             <div className='actionA'>
@@ -115,9 +116,8 @@ const Nav = (props) => {
                 <ul>
                   <li>
                     <img src={facebook} />
-                    <a href='/Stats/Tunisia/Facebook'>Facebook</a>
+                    <a href='#'>Facebook</a>
                   </li>
-                  {/* <li><img src={linkedin}/><a href="#">LinkedIn</a></li> */}
                 </ul>
               </div>
             </div>
@@ -136,11 +136,6 @@ const Nav = (props) => {
               </div>
               <div className={dropdownLanguage ? "menuA active" : "menuA"}>
                 <ul>
-                  {/* <li>
-                    <img src={facebook} />
-                    <a href='/Stats/Tunisia/Facebook'>Arabic</a>
-                  </li> */}
-                  {/* <li><img src={linkedin}/><a href="#">LinkedIn</a></li> */}
                   {languages.map(({ code, name, country_code }) => (
                     <li key={country_code}>
                       <a

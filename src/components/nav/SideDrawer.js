@@ -11,7 +11,7 @@ const SideDrawer = (props) => {
   }
   return (
     <div className={drawerClasses} style={{ paddingTop: "20%" }}>
-      <a href='/Home' className='nav-link w-nav-link w--nav-link-open'>
+      <a href='#' className='nav-link w-nav-link w--nav-link-open'>
         HOME
       </a>
       <a
@@ -25,7 +25,7 @@ const SideDrawer = (props) => {
         <div style={{ textAlign: "center" }}>
           <img src={facebook} style={{ height: "40px" }} />
           <a
-            href='/Stats/Tunisia/Facebook'
+            href='#'
             className='nav-link w-nav-link w--nav-link-open statsOpenRes'
           >
             Facebook

@@ -227,6 +227,18 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .menu-button {
+    color: #000;
+    font-size: 32px;
+  }
+  .brand-link {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    padding-left: 20px;
+  }
+  .navbar {
+    padding: 0 !important;
+  }
   .w-nav[data-collapse="small"] .w-nav-menu {
     display: none;
   }
@@ -235,6 +247,16 @@
   }
   .w-nav-brand {
     padding-left: 10px;
+  }
+  .nav-link {
+    display: block;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+    font-family: Lato, sans-serif;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
   }
 }
 @media screen and (max-width: 479px) {
