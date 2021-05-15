@@ -13,10 +13,11 @@ const SideDrawer = (props) => {
   }
   return (
     <div className={drawerClasses} style={{ paddingTop: "20%" }}>
-      <a href='#' className='nav-link w-nav-link w--nav-link-open'>
+      <a href='/#' className='nav-link w-nav-link w--nav-link-open'>
         {t("nav_home")}
       </a>
       <a
+        href='/#'
         className='nav-link w-nav-link w--nav-link-open'
         onClick={() => setDropdown(!dropdown)}
         style={{ cursor: "pointer" }}

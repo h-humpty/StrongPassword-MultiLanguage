@@ -80,7 +80,7 @@ const Nav = (props) => {
       >
         <div className='container w-container'>
           <a
-            href='#'
+            href='/#'
             aria-current='page'
             className='brand-link w-nav-brand w--current'
           >
@@ -109,12 +109,13 @@ const Nav = (props) => {
             )}
           </a>
           <nav role='navigation' className='nav-menu w-nav-menu'>
-            <a href='#' className='nav-link w-nav-link'>
+            <a href='/#' className='nav-link w-nav-link'>
               {t("nav_home")}
             </a>
             <div className='actionA'>
               <div className='profileA'>
                 <a
+                  href='/#'
                   className='nav-link w-nav-link'
                   onClick={() => {
                     setDropdown(!dropdown);
@@ -133,13 +134,14 @@ const Nav = (props) => {
                 <ul>
                   <li>
                     <img
+                      alt='facebook'
                       src={facebook}
                       style={{
                         marginLeft: t("rtl") === "yes" && "7px",
                         marginRight: t("rtl") === "yes" && "0",
                       }}
                     />
-                    <a href='#'>Facebook</a>
+                    <a href='/#'>Facebook</a>
                   </li>
                 </ul>
               </div>
@@ -147,6 +149,7 @@ const Nav = (props) => {
             <div className='actionA'>
               <div className='profileA'>
                 <a
+                  href='/#'
                   style={{ top: "3px" }}
                   className='nav-link w-nav-link'
                   onClick={() => {
@@ -165,6 +168,7 @@ const Nav = (props) => {
                   {languages.map(({ code, name, country_code }) => (
                     <li key={country_code}>
                       <a
+                        href='/#'
                         className={
                           currentLanguageCode === code
                             ? "noHover"
@@ -175,7 +179,6 @@ const Nav = (props) => {
                           setDropdownLanguage(false);
                           if (currentLanguageCode !== code) {
                             i18next.changeLanguage(code);
-                            window.location.href = window.location.href;
                           }
                         }}
                       >
