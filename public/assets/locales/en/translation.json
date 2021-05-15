@@ -1,7 +1,19 @@
 {
-  "language": "Language",
+  "rtl": "no",
   "app_title": "Title",
-
-  "welcome_message": "Welcome",
-  "days_since_release": "it's been {{number_of_days}} days since this video was released"
+  "nav_home": "HOME",
+  "nav_stats": "STATS",
+  "h1_title": "Random Password Generator",
+  "p1": "Names, birthdays, and street addresses may be easy to remember but they're also easily found online and should always be avoided in passwords to ensure the greatest strength. Make sure your passwords are at least 12 characters long and contain letters, numbers, and special characters.",
+  "p2": "All passwords you create here are generated locally, on your computer. They are not saved or shared anywhere else",
+  "generator_title": "Password Generator",
+  "generator_password_length": "Password length",
+  "generator_include_uppercase_letters": "Include uppercase letters",
+  "generator_include_lowercase_letters": "Include lowercase letters",
+  "generator_include_numbers": "Include Numbers",
+  "generator_include_symbols": "Include Symbols",
+  "generator_title_button": "Generator Password",
+  "generator_password_successfully_copied": "Password successfully copied to clipboard",
+  "generator_unsuccessfully_1": "You must select at least one option",
+  "generator_unsuccessfully_2": "Your password length must be between 16 and 30"
 }

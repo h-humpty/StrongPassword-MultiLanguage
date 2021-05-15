@@ -2,9 +2,11 @@ import React, { useEffect, useState, useRef } from "react";
 import "./generator.css";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useTranslation } from "react-i18next";
 
 const Generator = (props) => {
   toast.configure();
+  const { t } = useTranslation();
 
   const numbers = "0123456789";
   const upperCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -18,11 +20,10 @@ const Generator = (props) => {
   const [includeSymbols, setIncludeSymbols] = useState(true);
 
   const copyBtn = useRef();
-
   const handleGeneratePassword = (e) => {
     if (passwordLength > 30 || passwordLength < 16) {
       debugger;
-      notify("Your password length must be between 16 and 30 ", true);
+      notify(t("generator_unsuccessfully_2"), true);
 
       return;
     }
@@ -33,7 +34,7 @@ const Generator = (props) => {
       !includeSymbols
     ) {
       debugger;
-      notify("You must select at least one option", true);
+      notify(t("generator_unsuccessfully_1"), true);
 
       return;
     }
@@ -113,13 +114,13 @@ const Generator = (props) => {
 
   const handleCopyPassword = (e) => {
     copyToClipboard();
-    notify("Password successfully copied to clipboard");
+    notify(t("generator_password_successfully_copied"));
   };
   return (
     <>
       <div className='m-container m-containerGen'>
         <div className='m-generator'>
-          <h2 className='m-generator__header'>Password Generator</h2>
+          <h2 className='m-generator__header'>{t("generator_title")}</h2>
 
           <div className='m-generator__password'>
             {password}
@@ -127,6 +128,10 @@ const Generator = (props) => {
               className='m-generator__passwordGenerateBtn'
               onClick={handleCopyPassword}
               ref={copyBtn}
+              style={{
+                right: t("rtl") === "yes" && "auto",
+                left: t("rtl") === "yes" && "2px",
+              }}
             >
               <svg
                 className='clipboard-icon'
@@ -147,7 +152,9 @@ const Generator = (props) => {
           </div>
 
           <div className='form-group'>
-            <label htmlFor='password-length'>Password length</label>
+            <label htmlFor='password-length'>
+              {t("generator_password_length")}
+            </label>
             <input
               style={{ color: "#000" }}
               name='password-length'
@@ -161,7 +168,9 @@ const Generator = (props) => {
           </div>
 
           <div className='form-group'>
-            <label htmlFor='uppercase-letters'>Include uppercase letters</label>
+            <label htmlFor='uppercase-letters'>
+              {t("generator_include_uppercase_letters")}
+            </label>
             <input
               id='uppercase-letters'
               name='uppercase-letters'
@@ -172,7 +181,9 @@ const Generator = (props) => {
           </div>
 
           <div className='form-group'>
-            <label htmlFor='lowercase-letters'>Include lowercase letters</label>
+            <label htmlFor='lowercase-letters'>
+              {t("generator_include_lowercase_letters")}
+            </label>
             <input
               id='lowercase-letters'
               name='lowercase-letters'
@@ -183,7 +194,9 @@ const Generator = (props) => {
           </div>
 
           <div className='form-group'>
-            <label htmlFor='include-numbers'>Include Numbers</label>
+            <label htmlFor='include-numbers'>
+              {t("generator_include_numbers")}
+            </label>
             <input
               id='include-numbers'
               name='include-numbers'
@@ -194,7 +207,9 @@ const Generator = (props) => {
           </div>
 
           <div className='form-group'>
-            <label htmlFor='include-symbols'>Include Symbols</label>
+            <label htmlFor='include-symbols'>
+              {t("generator_include_symbols")}
+            </label>
             <input
               id='include-symbols'
               name='include-symbols'
@@ -203,9 +218,8 @@ const Generator = (props) => {
               onChange={(e) => setIncludeSymbols(e.target.checked)}
             />
           </div>
-
           <button className='m-generator__btn' onClick={handleGeneratePassword}>
-            Generate Password
+            {t("generator_title_button")}
           </button>
         </div>
       </div>

@@ -84,18 +84,33 @@ const Nav = (props) => {
             aria-current='page'
             className='brand-link w-nav-brand w--current'
           >
-            <img
-              src={logo}
-              loading='lazy'
-              height='30'
-              alt='Logo Black'
-              className='logo'
-            />
-            <div className='brand-name'>StrongPasswordGenerator</div>
+            {t("rtl") === "no" ? (
+              <>
+                <img
+                  src={logo}
+                  loading='lazy'
+                  height='30'
+                  alt='Logo Black'
+                  className='logo'
+                />
+                <div className='brand-name'>StrongPasswordGenerator</div>{" "}
+              </>
+            ) : (
+              <>
+                <div className='brand-name'>StrongPasswordGenerator</div>
+                <img
+                  src={logo}
+                  loading='lazy'
+                  height='30'
+                  alt='Logo Black'
+                  className='logo'
+                />
+              </>
+            )}
           </a>
           <nav role='navigation' className='nav-menu w-nav-menu'>
             <a href='#' className='nav-link w-nav-link'>
-              HOME
+              {t("nav_home")}
             </a>
             <div className='actionA'>
               <div className='profileA'>
@@ -106,16 +121,24 @@ const Nav = (props) => {
                     setDropdownLanguage(false);
                   }}
                 >
-                  STATS
+                  {t("nav_stats")}
                 </a>
               </div>
               <div
                 className={dropdown ? "menuA active" : "menuA"}
-                style={{ right: "67px" }}
+                style={{
+                  right: t("rtl") === "no" ? "67px" : "100px",
+                }}
               >
                 <ul>
                   <li>
-                    <img src={facebook} />
+                    <img
+                      src={facebook}
+                      style={{
+                        marginLeft: t("rtl") === "yes" && "7px",
+                        marginRight: t("rtl") === "yes" && "0",
+                      }}
+                    />
                     <a href='#'>Facebook</a>
                   </li>
                 </ul>
@@ -134,7 +157,10 @@ const Nav = (props) => {
                   <GlobeIcon />
                 </a>
               </div>
-              <div className={dropdownLanguage ? "menuA active" : "menuA"}>
+              <div
+                className={dropdownLanguage ? "menuA active" : "menuA"}
+                style={{ right: t("rtl") === "yes" && "180px" }}
+              >
                 <ul>
                   {languages.map(({ code, name, country_code }) => (
                     <li key={country_code}>
@@ -157,6 +183,8 @@ const Nav = (props) => {
                           className={`flag-icon flag-icon-${country_code} mx-2 flagA`}
                           style={{
                             opacity: currentLanguageCode === code ? 0.5 : 1,
+                            marginLeft: t("rtl") === "yes" && "7px",
+                            marginRight: t("rtl") === "yes" && "0",
                           }}
                         ></span>
                         {name}

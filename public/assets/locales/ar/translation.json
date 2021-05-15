@@ -1,7 +1,19 @@
 {
-  "language": "اللغة",
+  "rtl": "yes",
   "app_title": "عنوان",
-
-  "welcome_message": "اهلا بكم",
-  "days_since_release": "لقد مرت {{number_of_days}} أيام على إصدار هذا الفيديو"
+  "nav_home": "الرئيسية",
+  "nav_stats": "الإحصاء",
+  "h1_title": "مولد كلمة السر العشوائية",
+  "p1": "قد يكون من السهل تذكر الأسماء وأعياد الميلاد وعناوين الشوارع ولكن يسهل العثور عليها أيضًا عبر الإنترنت ويجب تجنبها دائمًا في كلمات المرور لضمان أكبر قوة. تأكد من أن كلمات المرور الخاصة بك تتكون من 12 حرفًا على الأقل وتحتوي على أحرف وأرقام وأحرف خاصة.",
+  "p2": "يتم إنشاء جميع كلمات المرور التي تقوم بإنشائها هنا محليًا على جهاز الكمبيوتر الخاص بك. لا يتم حفظها أو مشاركتها في أي مكان آخر",
+  "generator_title": "مولد كلمة السر",
+  "generator_password_length": "طول كلمة المرور",
+  "generator_include_uppercase_letters": "قم بتضمين أحرف كبيرة",
+  "generator_include_lowercase_letters": "قم بتضمين أحرف صغيرة",
+  "generator_include_numbers": "قم بتضمين الأرقام",
+  "generator_include_symbols": "قم بتضمين الرموز",
+  "generator_title_button": "مولد كلمة السر",
+  "generator_password_successfully_copied": "تم نسخ كلمة المرور بنجاح إلى الحافظة",
+  "generator_unsuccessfully_1": "يجب عليك تحديد خيار واحد على الأقل",
+  "generator_unsuccessfully_2": "يجب أن يكون طول كلمة المرور الخاصة بك بين 16 و 30"
 }

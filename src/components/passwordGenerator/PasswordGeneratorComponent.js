@@ -1,8 +1,11 @@
 import React from "react";
 
 import Generator from "./Generator";
+import { useTranslation } from "react-i18next";
 
 const PasswordGeneratorComponent = (props) => {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className='main-page-container w-container containerA'>
@@ -14,31 +17,50 @@ const PasswordGeneratorComponent = (props) => {
             marginTop: "90px",
           }}
         >
-          Random Password Generator
+          {t("h1_title")}
         </h1>
         <div className='main-page-columns w-row'>
-          <div className='w-col w-col-8'>
-            <p
-              className='main-page-primary-text'
-              style={{ lineHeight: "50px", textIndent: "50px" }}
-            >
-              Names, birthdays, and street addresses may be easy to remember but
-              they're also easily found online and should always be avoided in
-              passwords to ensure the greatest strength. Make sure your
-              passwords are at least 12 characters long and contain letters,
-              numbers, and special characters.
-            </p>
-            <p
-              className='main-page-primary-text'
-              style={{ lineHeight: "50px", textIndent: "50px" }}
-            >
-              All passwords you create here are generated locally, on your
-              computer. They are not saved or shared anywhere else.
-            </p>
-          </div>
-          <div className='w-col w-col-4'>
-            <Generator />
-          </div>
+          {t("rtl") === "no" ? (
+            <>
+              <div className='w-col w-col-8'>
+                <p
+                  className='main-page-primary-text'
+                  style={{ lineHeight: "50px", textIndent: "50px" }}
+                >
+                  {t("p1")}
+                </p>
+                <p
+                  className='main-page-primary-text'
+                  style={{ lineHeight: "50px", textIndent: "50px" }}
+                >
+                  {t("p2")}
+                </p>
+              </div>
+              <div className='w-col w-col-4'>
+                <Generator />
+              </div>{" "}
+            </>
+          ) : (
+            <>
+              <div className='w-col w-col-4'>
+                <Generator />
+              </div>{" "}
+              <div className='w-col w-col-8'>
+                <p
+                  className='main-page-primary-text'
+                  style={{ lineHeight: "50px", textIndent: "50px" }}
+                >
+                  {t("p1")}
+                </p>
+                <p
+                  className='main-page-primary-text'
+                  style={{ lineHeight: "50px", textIndent: "50px" }}
+                >
+                  {t("p2")}
+                </p>
+              </div>{" "}
+            </>
+          )}
         </div>
       </div>
     </>

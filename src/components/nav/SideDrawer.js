@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./sidedrawer.css";
-import facebook from "../../assets/images/facebook.png";
+import { useTranslation } from "react-i18next";
 
 const SideDrawer = (props) => {
+  const { t } = useTranslation();
+
   const [dropdown, setDropdown] = useState(false);
 
   let drawerClasses = "side-drawer";
@@ -12,26 +14,15 @@ const SideDrawer = (props) => {
   return (
     <div className={drawerClasses} style={{ paddingTop: "20%" }}>
       <a href='#' className='nav-link w-nav-link w--nav-link-open'>
-        HOME
+        {t("nav_home")}
       </a>
       <a
         className='nav-link w-nav-link w--nav-link-open'
         onClick={() => setDropdown(!dropdown)}
         style={{ cursor: "pointer" }}
       >
-        STATS
+        {t("nav_stats")}
       </a>
-      {dropdown && (
-        <div style={{ textAlign: "center" }}>
-          <img src={facebook} style={{ height: "40px" }} />
-          <a
-            href='#'
-            className='nav-link w-nav-link w--nav-link-open statsOpenRes'
-          >
-            Facebook
-          </a>
-        </div>
-      )}
     </div>
   );
 };
