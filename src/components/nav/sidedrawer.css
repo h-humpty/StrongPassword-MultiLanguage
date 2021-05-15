@@ -1,0 +1,24 @@
+.side-drawer {
+  height: 100%;
+  background: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 200;
+  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+}
+.side-drawer.open {
+  transform: translateX(0);
+}
+.w--nav-link-open:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.statsOpenRes {
+  display: inline !important;
+  padding: 10px !important;
+  vertical-align: middle !important;
+}

@@ -1,0 +1,98 @@
+.actionA .profileA {
+  position: relative;
+  /* width: 60px; */
+  /* height: 60px; */
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.actionA .profileA img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.actionA .menuA {
+  position: absolute;
+  top: 60px;
+  right: -10px;
+  padding: 0 20px;
+  background: #fff;
+  width: 150px;
+  box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  box-shadow: 0px 4px 16px rgb(51 102 255 / 20%);
+}
+.actionA .menuA.active {
+  visibility: visible;
+  opacity: 1;
+}
+.actionA .menuA::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 28px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  transform: rotate(45deg);
+  box-shadow: inset 3px 3px 3px -4px rgb(51 102 255 / 20%);
+}
+.actionA .menuA ul {
+  padding: 0;
+  margin: 0 !important;
+}
+.actionA .menuA ul li:first-child {
+  list-style: none;
+  padding: 10px 0;
+  border-top: none;
+  display: flex;
+  align-items: center;
+}
+.actionA .menuA ul li {
+  list-style: none;
+  padding: 10px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+}
+.actionA .menuA ul li img {
+  max-width: 20px;
+  margin-right: 10px;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+.actionA .menuA ul li:hover img {
+  opacity: 1;
+}
+.actionA .menuA ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 500;
+  transition: 0.5s;
+}
+.actionA .menuA ul li:hover a {
+  color: #000;
+}
+.actionA .menuA ul li::before {
+  content: none !important;
+}
+
+.flagA {
+  margin-right: 7px;
+}
+
+.actionA .menuA ul li:hover .noHover {
+  color: rgba(0, 0, 0, 0.6);
+  cursor: default;
+}
+
+.languagePointer {
+  cursor: pointer;
+}
