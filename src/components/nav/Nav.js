@@ -90,7 +90,7 @@ const Nav = (props) => {
               alt='Logo Black'
               className='logo'
             />
-            <div className='brand-name'>DataLeakChecker</div>
+            <div className='brand-name'>StrongPasswordGenerator</div>
           </a>
           <nav role='navigation' className='nav-menu w-nav-menu'>
             <a href='/Home' className='nav-link w-nav-link'>

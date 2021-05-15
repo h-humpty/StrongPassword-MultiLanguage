@@ -1,0 +1,75 @@
+.m-container {
+  width: 370px;
+}
+.m-generator {
+  border-radius: 3px;
+  background: #0e0e0e;
+  box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
+  padding: 20px;
+}
+.m-generator__header {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.m-generator__password {
+  position: relative;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 13px 10px;
+  color: #fff;
+  margin-bottom: 15px;
+  border: 1px solid #fff;
+}
+.m-generator__passwordGenerateBtn {
+  position: absolute;
+  background: #fff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  height: 40px;
+  top: 2px;
+  right: 2px;
+  cursor: pointer;
+}
+.m-generator__btn {
+  background: #fff;
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  color: #000;
+  font-size: 17px;
+  cursor: pointer;
+}
+.clipboard-icon {
+  width: 20px;
+  height: 20px;
+  color: #000;
+}
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.form-group input[type="number"] {
+  width: 40px;
+}
+.form-group:last-of-type {
+  margin-bottom: 25px;
+}
+.form-group label {
+  cursor: pointer;
+  user-select: none;
+}
+.Toastify__toast-body,
+.Toastify__close-button--default {
+  color: #000;
+  opacity: 1;
+}
+
+@media screen and (max-width: 767px) {
+  .m-containerGen {
+    margin: auto !important;
+  }
+}

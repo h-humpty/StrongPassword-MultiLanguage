@@ -1,5 +1,7 @@
 import React from "react";
 
+import Generator from "./Generator";
+
 const PasswordGeneratorComponent = (props) => {
   return (
     <>
@@ -30,12 +32,13 @@ const PasswordGeneratorComponent = (props) => {
               className='main-page-primary-text'
               style={{ lineHeight: "50px", textIndent: "50px" }}
             >
-              All passwords you create with the DataLeakChecker Password
-              Generator are generated locally, on your computer. They are not
-              saved or shared anywhere else.
+              All passwords you create here are generated locally, on your
+              computer. They are not saved or shared anywhere else.
             </p>
           </div>
-          <div className='w-col w-col-4'></div>
+          <div className='w-col w-col-4'>
+            <Generator />
+          </div>
         </div>
       </div>
     </>
